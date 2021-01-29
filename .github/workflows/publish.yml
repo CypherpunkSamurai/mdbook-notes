@@ -23,7 +23,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          deploy_key: ${{ secrets.PUBLISH_TOKEN }}
+          deploy_key: ${{ secrets.REPO_DEPLOY_KEY }}  # SSH KEY, NOT TOKEN. CAN BE FOR ONE REPO NOT ENTIRE GITHUB ACCOUNT
           external_repository: ${{ github.actor }}/gitnotes
           publish_dir: ./book
           publish_branch: master
