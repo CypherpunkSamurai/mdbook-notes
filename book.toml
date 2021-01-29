@@ -5,3 +5,20 @@ multilingual = false
 src = "contents"
 title = "mdBook GithubActions"
 description = "mdBook GithubActions - Automatically publish markdown pages to static github pages"
+
+
+[output.html]
+default-theme = "rust"
+preferred-dark-theme = "ayu"
+mathjax-support = true
+site-url = "https://cypherpunksamurai.github.io/gitnotes/"
+
+
+
+[output.html.playground]
+editable = true
+line-numbers = true
+
+
+
+
