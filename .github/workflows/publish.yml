@@ -1,0 +1,28 @@
+name: mdBook Deploy to Target Repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build mdBook
+        uses: peaceiris/actions-mdbook@v1
+        with:
+          mdbook-version: 'latest'
+          #mdbook-version: '0.4.6'
+      - run: mdbook build
+
+      - name: Deploy to Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.PUBLISH_TOKEN }}
+          external_repository: ${{ github.actor }}/gitnotes
+          publish_dir: ./book
+          publish_branch: master

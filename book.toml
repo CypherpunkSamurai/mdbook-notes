@@ -1,0 +1,6 @@
+[book]
+authors = ["CypherpunkSamurai"]
+language = "en"
+multilingual = false
+src = "contents"
+title = "mdBook GithubActions"
