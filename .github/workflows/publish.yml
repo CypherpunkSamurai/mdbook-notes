@@ -3,6 +3,7 @@ name: mdBook Deploy to Target Repo
 on:
   push:
     branches:
+      - master
       - main
 
 jobs:
