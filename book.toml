@@ -4,9 +4,4 @@ language = "en"
 multilingual = false
 src = "contents"
 title = "mdBook GithubActions"
-
-
-
-[output.latex]
-latex = true
-pdf = true
+description = "mdBook GithubActions - Automatically publish markdown pages to static github pages"
