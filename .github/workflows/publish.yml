@@ -20,6 +20,8 @@ jobs:
           mdbook-version: 'latest'
           #mdbook-version: '0.4.6'
 
+      - run: cargo install mdbook-latex
+
       - run: mdbook build
 
       - name: Deploy to Pages
